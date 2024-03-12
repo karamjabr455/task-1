@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Details.css">
+    
+    <title>Details</title>
+</head>
+<body>
+    <section class="home" id="home">
+        <nav>
+            <img id="logo" src="./Images/Logo.png">
+            <ul id="actions">
+                <li><a href="file:///E:/TASK%20training/html/TASK%20training%20home.html">Home</a></li>
+                <li><a href="#home">Catalogue</a></li>
+                <li><a href="#home">Contact Us</a></li>
+                <li><a href="#home">Help</a></li>
+            </ul>
+            <a href="./my cart.html">
+            <img class="icons" src="./Images/my cart.png" ></a>
+            <a href="#" class="btn">Register</a>
+            <button id="menudash">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+        </nav>
+
+
+    <div class="product-page">
+        <div class="product-info">
+           <h1>Honda - Civic Type R</h1>
+            <p>6000 cc</p>
+            
+           <div class="rating">Rating And Review:</div>
+           <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+          </div>
+             <div class="description">
+                <h3>Desciption</h3>
+                The culmination of comfort, luxury, and powerful <br>living is embodied <br>in the First-Ever BMW X7 – the biggest BMW ever built.
+            </div>
+             <div class="colors">
+               <span>Colors: <br></span> 
+                <span class="color red"></span>
+                <span class="color white"></span>
+                <span class="color blue"></span>
+            </div>
+            
+   
+        <div class="divimg">
+            <h4>Details</h4>
+        <img id="Vector11" src="./Images/Vector11111.png">
+    <div class="imgcar">
+        
+        <img src="./Images/mid-size-car-luxury-vehicle-compact-car-sports-car-tuning-183da9bb065c193249f3de776599ca2c.png" alt="" id="main-image">
+    </div>
+    </div>
+
+    <div class="container">
+        <button onclick="decrease()">-</button>
+        <input type="text" id="quantity" value="1" readonly>
+        <button onclick="increase()">+</button>
+        Price: <span id="price">250</span>$
+      </div>
+      <div class="Slidercar2">
+        <!-- Slider -->
+        <button id="buttonslider1" >←</button> 
+        <!-- Add your images here -->
+        <!-- You can use a JavaScript library like Slick or Swiper for better functionality -->
+        <img class="Sliderimg" src="./Images/mid-size-car-luxury-vehicle-compact-car-sports-car-tuning-183da9bb065c193249f3de776599ca2c.png" alt="">
+        <img  class="Sliderimg" src="./Images/slider.png" alt="">
+        <img  class="Sliderimg" src="./Images/slider1.png" alt="">
+        <img  class="Sliderimg" src="./Images/slider3.png" alt="">
+
+
+
+        
+        
+        <!-- End of slider images -->
+        
+          <button id="buttonslider2" >→</button>
+        </div>
+          <!-- Buttons -->
+          <button class="buttonadd">Add To Cart</button> 
+          <button class="buttonabuy">Buy Now</button> 
+    </div>
+    
+
+
+
+    <script src="./Details.js"></script>
+</body>
+</html>

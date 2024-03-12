@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body{
+  width: 100%; /* تعيين عرض الصفحة ليكون 100% من عرض الشاشة */
+  height: 100%; /* تعيين طول الصفحة ليكون 100% من ارتفاع الشاشة */
+  margin: 0; /* إزالة الهوامش الافتراضية للصفحة */
+  padding: 0; /* إزالة الحواف الداخلية الافتراضية للصفحة */
+  overflow-x: hidden;
+}
+:root{
+  --primarycolor:#976E72;
+  --padding:8%;
+
+}
+  
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*start nav bar...........................*/
+.home{
+  width: 100%;
+  height: 100vh;
+  background-color:FFFFFFF2;
+  display: flex;
+  flex-direction: column;
+}
+#logo
+{
+  cursor: pointer;
+  z-index: 2;
+
+}
+#victornavbar{
+  position:absolute;
+  left:0 ;
+  top: 0;
+  width: 70%;
+  z-index: 1;
+}
+
+nav{
+
+  padding-top: 2.8rem;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Righteous", sans-serif;
+  font-size: 15px;
+
+  
+
+}
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  margin: 0.8rem 1.5rem;
+ 
+}
+nav ul li a{
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.4s;
+ 
+
+}
+#actions{
+  z-index: 3;
+}
+nav ul li a:hover{
+  color: var(--primarycolor);
+  border-bottom: 2px solid var(--primarycolor) ;
+}
+.nav ul li a:checked{
+  border-bottom: 2px solid #976E72 ;
+  color: #976E72;
+
+}
+.icons{
+  width:30px;
+height: 35px;
+gap: 10px;
+cursor: pointer;
+position: absolute;
+left:1230px;
+bottom:645px;
+
+
+}
+.btn{
+  padding: 0.8rem 1.87rem;
+  border-radius:  30px;
+    
+  background-color:transparent;
+  border: 1px solid #976E72; 
+  color: #976E72;
+  text-decoration: none;
+  transition: 0.4s;
+
+}
+.btn:hover{
+  background: #976e722a;
+}
+
+#menudash{
+  display:none;
+  position: relative;
+  appearance: none;
+  border: none;
+  outline:none;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+}
+#menudash span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  background-color:#976E72;
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: 0.4s;
+  margin-bottom: 5px;
+}
+/*Add a closing tag
+So, giving properties to the children, span, so that when pressed, it turns into (x).*/
+#menudash.is-active span:nth-child(1)                      
+{
+  transform: translate(0px,-2px) rotate(45deg);
+}
+#menudash.is-active span:nth-child(2){
+  opacity: 0;
+  transform: translateX(15px);
+
+
+}
+
+#menudash.is-active span:nth-child(3){
+transform: translate(-3px,3px)rotate(-45deg);
+}
+
+/*end nav bar...................................*/
+/*product-info..................*/
+
+.product-info h1{
+    font-size:30px ;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.product-info p{
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: 30px;
+    color:#976E72;
+}
+.divimg #Vector11{
+    width: 600px;
+    height:700px;
+    
+
+    position: absolute;
+    right: 0px;
+    top: 120px;
+    z-index: 1;
+}
+.divimg h4{
+    
+   z-index: 2;
+    position: relative;
+    left:1100px;
+    bottom:100px;
+    font-size: 20px;
+
+}
+.divimg img{
+  position: relative;
+  bottom: 200px;
+  margin-left: 20px;
+  
+}
+#main-image{
+  width:600px;
+  margin-left: 200px;
+}
+.product-page {
+    display: flex;
+  }
+  
+  .product-info {
+    max-width: 50%;
+  }
+  /* rating .................................................*/
+  .rating {
+    position: relative;
+    left: 1100px;
+    top: 80px;
+    z-index: 4;
+  }
+  .rating {
+    display: inline-block;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    cursor: pointer;
+    width: 50px;
+    font-size:20px;
+    color: gray;
+    margin-right:-20px;
+    float: right;
+    position: relative;
+    top: 30px;
+    right:140px;
+  }
+  
+  .rating label:before {
+    content: '\2605'; 
+    padding:1px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .rating input:checked ~ label {
+    color:#976E72;
+  }
+  
+  .rating label:hover {
+    color:#976E72;
+
+
+  }
+
+  
+  .description {
+    position: relative;
+left:1100px;
+top:155px;
+z-index: 5;
+font-size: 15px;
+  }
+  /*colors..............................................*/
+  .colors .color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+    left: -20px;
+    cursor: pointer;
+
+    
+  }
+  .colors{
+    position: relative;
+    left: 1100px;
+    top: 200px;
+    z-index: 7;
+  }
+  
+  
+  .red { background-color: white; }
+  .white { background-color:red; }
+  .blue { background-color: black; }
+
+
+
+  .prise span{
+    color: #976E72;
+    font-family: "Righteous", sans-serif;
+
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 1250px;
+    bottom:15px;
+    z-index: 8;
+  }
+  
+  button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  button:hover{
+    background-color: #976E72;
+  }
+  
+  input {
+      width:30px;
+      text-align:center;
+      border: none;
+  }
+  #price{
+    margin-left: 15px;
+  }
+
+
+.Slidercar2{
+  position: relative;
+  bottom: 50px;
+  left: 200px;
+  
+}
+
+.imgcar{
+  width: 600px;
+  height: 200px;
+}
+.imgcar img{
+  max-width:100%;
+}
+  .slider {
+    display: flex;
+    overflow: hidden; 
+  }
+  
+.Sliderimg {
+    width:100px; 
+    height: auto; 
+    margin-right: 10px; 
+    border-radius: 17px;
+  
+}
+  
+  #buttonslider1{
+    border-style: none;
+    background-color: transparent; 
+        cursor: pointer; 
+        color: #976E72;
+  }
+
+  #buttonslider2{
+    border-style: none;
+    background-color: transparent; 
+        cursor: pointer; 
+        color: #976E72;
+  }
+  
+  .buttonadd{
+    width: 150px;
+    height: 40px;
+    position: relative;
+    left: 1100px;
+    bottom:70px;
+    border-radius: 30px;
+    z-index: 9;
+    background-color:#ffff;
+    color: #976E72;
+  }
+  .buttonabuy{
+    width: 150px;
+    height: 40px;
+    position: relative;
+    left: 1150px;
+    bottom:70px;
+    border-radius: 30px;
+    z-index: 10;
+    background-color:#976E72;
+    color: #ffff;
+  }
+  @media only screen and (max-width: 768px) {
+    nav ul li {
+      margin: 0.5rem 0.8rem;
+    }
+    .icons {
+      left: 10px;
+      bottom: 10px;
+    }
+    .divimg h4 {
+      left: 20px;
+      bottom: 10px;
+    }
+    .product-info h1,
+    .product-info p {
+      margin-left: 20px;
+      font-size: 20px;
+    }
+    .divimg img {
+      bottom: 50px;
+    }
+    #main-image {
+      margin-left: 20px;
+    }
+    .rating {
+      left: 20px;
+      top: 20px;
+    }
+    .description {
+      left: 20px;
+      top: 40px;
+    }
+    .colors {
+      left: 20px;
+      top: 80px;
+    }
+    .container {
+      left: 20px;
+      bottom: 20px;
+    }
+    .buttonadd,
+    .buttonabuy {
+      left: 20px;
+      bottom: 0px;
+    }
+  }
+
+
+
+
+
+
+
+
